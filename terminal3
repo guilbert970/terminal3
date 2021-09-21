@@ -1,0 +1,37 @@
+guilbert@guilbert-X540LJ:~/Documents/planets $ find
+.
+./fictional
+./fictional/arrakis.jpeg
+./fictional/coruscant.jpeg
+./fictional/cybertron.jpeg
+./inhabited
+./inhabited/arrakis.jpeg
+./inhabited/coruscant.jpeg
+./inhabited/cybertron.jpeg
+./inhabited/earth.jpeg
+./real
+./real/dwarf-planets
+./real/gas-giants
+./real/gas-giants/jupiter.jpeg
+./real/gas-giants/neptune.jpeg
+./real/gas-giants/saturn.jpeg
+./real/gas-giants/uranus.jpeg
+./real/terrestrial
+./real/terrestrial/earth.jpeg
+./real/terrestrial/mars.jpeg
+./real/terrestrial/mercury.jpeg
+./real/terrestrial/venus.jpeg
+
+
+ 62  curl -L -o planets.zip "https://github.com/WildCodeSchool/quests-resources/blob/master/terminal/planets.zip?raw=true"
+ 63  unzip planets.zip
+ 71  mkdir planets/real planets/fictional planets/inhabited
+ 73  mkdir planets/real/terrestrial planets/real/gas-giants planets/real/dwarf-planets 
+ 75  mv mercury.jpeg venus.jpeg earth.jpeg mars.jpeg jupiter.jpeg saturn.jpeg uranus.jpeg neptune.jpeg pluto.jpeg real/
+ 77  mv mercury.jpeg venus.jpeg earth.jpeg mars.jpeg terrestrial/
+ 80  mv jupiter.jpeg saturn.jpeg neptune.jpeg uranus.jpeg gas-giants/
+ 81  mv pluto.jpeg dwarf-planets/
+ 86  mv arrakis.jpeg coruscant.jpeg cybertron.jpeg fictional/
+ 95  cp fictional/arrakis.jpeg fictional/coruscant.jpeg fictional/cybertron.jpeg inhabited/
+ 97  cp real/terrestrial/earth.jpeg inhabited/
+ 99  rm real/dwarf-planets/pluto.jpeg
